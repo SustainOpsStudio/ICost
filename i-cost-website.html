@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I-Cost | On-Demand Construction Expertise | QS, PM & Support Services UK</title>
+<meta name="description" content="I-Cost provides on-demand construction professionals — Quantity Surveyors, Project Managers, Estimators & Administrators, deployed remotely or on-site across the UK.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --navy: #0C2340;
+    --navy-light: #153560;
+    --blue: #1E6BB8;
+    --blue-light: #2B7FD4;
+    --blue-pale: #E8F1FB;
+    --green: #10B981;
+    --green-dark: #059669;
+    --orange: #F59E0B;
+    --white: #FFFFFF;
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 50px -12px rgba(0,0,0,0.15);
+    --radius: 12px;
+    --radius-lg: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--gray-800);
+    line-height: 1.6;
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 { font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.2; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* ============ NAVBAR ============ */
+  .navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-200);
+    transition: var(--transition);
+  }
+  .navbar.scrolled { box-shadow: var(--shadow); }
+  .navbar-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px;
+  }
+  .logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.6rem; font-weight: 800; color: var(--navy);
+    text-decoration: none; display: flex; align-items: center; gap: 8px;
+  }
+  .logo span { color: var(--blue); }
+  .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--gray-700); font-weight: 500;
+    font-size: 0.925rem; padding: 8px 16px; border-radius: 8px;
+    transition: var(--transition);
+  }
+  .nav-links a:hover { color: var(--navy); background: var(--gray-100); }
+  .nav-links a.active {
+    color: var(--navy);
+    background: var(--blue-pale);
+  }
+  .nav-links .dropdown { position: relative; }
+  .nav-links .dropdown > a::after { content: ' \25BE'; font-size: 0.7em; }
+  .dropdown-menu {
+    display: none; position: absolute; top: 100%; left: 0;
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius); box-shadow: var(--shadow-lg);
+    min-width: 260px; padding: 8px; margin-top: 4px;
+  }
+  .dropdown:hover .dropdown-menu { display: block; }
+  .dropdown-menu a {
+    display: block; padding: 10px 16px; border-radius: 8px;
+    font-size: 0.875rem; color: var(--gray-600);
+  }
+  .dropdown-menu a:hover { background: var(--blue-pale); color: var(--navy); }
+  .dropdown-menu a small { display: block; font-size: 0.75rem; color: var(--gray-400); margin-top: 2px; font-weight: 400; }
+  .btn-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green); color: var(--white); padding: 12px 24px;
+    border-radius: 50px; font-weight: 600; font-size: 0.925rem;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: var(--transition); white-space: nowrap;
+  }
+  .btn-cta:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(16,185,129,0.3); }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--blue); color: var(--white); padding: 14px 28px;
+    border-radius: 50px; font-weight: 600; font-size: 1rem;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: var(--transition);
+  }
+  .btn-primary:hover { background: var(--blue-light); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(30,107,184,0.3); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent; color: var(--white); padding: 14px 28px;
+    border-radius: 50px; font-weight: 600; font-size: 1rem;
+    text-decoration: none; border: 2px solid rgba(255,255,255,0.4);
+    cursor: pointer; transition: var(--transition);
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+  .btn-outline-dark {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent; color: var(--navy); padding: 12px 24px;
+    border-radius: 50px; font-weight: 600; font-size: 0.925rem;
+    text-decoration: none; border: 2px solid var(--gray-300);
+    cursor: pointer; transition: var(--transition);
+  }
+  .btn-outline-dark:hover { border-color: var(--blue); color: var(--blue); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+  .hamburger span { width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: var(--transition); }
+  .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 14px;
+    border-radius: 8px;
+    z-index: 1100;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .skip-link:focus { top: 16px; }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative; min-height: 100vh; display: flex; align-items: center;
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 40%, var(--navy-light) 100%);
+    overflow: hidden; padding-top: 72px;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-grid {
+    position: absolute; top: 0; right: -10%; width: 60%; height: 100%;
+    opacity: 0.08;
+    background: repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.3) 60px, rgba(255,255,255,0.3) 61px),
+                repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.3) 60px, rgba(255,255,255,0.3) 61px);
+    transform: perspective(1000px) rotateY(-15deg);
+  }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50px; padding: 6px 16px 6px 8px; margin-bottom: 24px;
+  }
+  .hero-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .hero-badge span { color: rgba(255,255,255,0.85); font-size: 0.85rem; font-weight: 500; }
+  .hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.75rem); color: var(--white);
+    font-weight: 800; max-width: 700px; margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 em { font-style: normal; color: var(--green); }
+  .hero p {
+    font-size: 1.2rem; color: rgba(255,255,255,0.8);
+    max-width: 560px; margin-bottom: 36px; line-height: 1.7;
+  }
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+  .hero-stats {
+    display: flex; gap: 48px; margin-top: 64px; padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .hero-stat h3 { font-size: 2rem; color: var(--white); font-weight: 800; }
+  .hero-stat p { font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+  /* ============ TRUST BAR ============ */
+  .trust-bar {
+    background: var(--white); border-bottom: 1px solid var(--gray-200);
+    padding: 28px 0;
+  }
+  .trust-bar-inner {
+    display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap;
+  }
+  .trust-bar p { font-size: 0.85rem; color: var(--gray-400); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+  .trust-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.95rem; color: var(--gray-600); font-weight: 500;
+  }
+  .trust-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--blue-pale); display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  /* ============ SECTION STYLES ============ */
+  section { padding: 100px 0; }
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.825rem; font-weight: 600; color: var(--blue);
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;
+  }
+  .section-label::before { content: ''; width: 24px; height: 2px; background: var(--blue); border-radius: 2px; }
+  .section-title {
+    font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800;
+    color: var(--navy); margin-bottom: 16px; letter-spacing: -0.02em;
+  }
+  .section-subtitle {
+    font-size: 1.1rem; color: var(--gray-500); max-width: 640px;
+    line-height: 1.7;
+  }
+  .section-header { margin-bottom: 56px; }
+  .section-header.center { text-align: center; }
+  .section-header.center .section-subtitle { margin: 0 auto; }
+  .bg-gray { background: var(--gray-50); }
+  .bg-navy { background: var(--navy); }
+
+  /* ============ SERVICES GRID ============ */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
+  .service-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg); padding: 36px;
+    transition: var(--transition); position: relative; overflow: hidden;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); border-color: transparent; }
+  .service-card::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: linear-gradient(90deg, var(--blue), var(--green));
+    opacity: 0; transition: var(--transition);
+  }
+  .service-card:hover::after { opacity: 1; }
+  .service-icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; margin-bottom: 20px;
+  }
+  .service-icon.blue { background: var(--blue-pale); }
+  .service-icon.green { background: #D1FAE5; }
+  .service-icon.orange { background: #FEF3C7; }
+  .service-icon.purple { background: #EDE9FE; }
+  .service-icon.red { background: #FEE2E2; }
+  .service-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+  .service-card p { font-size: 0.95rem; color: var(--gray-500); line-height: 1.7; margin-bottom: 20px; }
+  .service-card .learn-more {
+    font-size: 0.9rem; font-weight: 600; color: var(--blue);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+    transition: var(--transition);
+  }
+  .service-card .learn-more:hover { gap: 10px; }
+
+  /* ============ SERVICE DETAIL ============ */
+  .service-detail { padding: 80px 0; border-bottom: 1px solid var(--gray-200); }
+  .service-detail:last-child { border-bottom: none; }
+  .service-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .service-detail-grid.reverse { direction: rtl; }
+  .service-detail-grid.reverse > * { direction: ltr; }
+  .service-detail-content h3 { font-size: 1.85rem; font-weight: 800; color: var(--navy); margin-bottom: 16px; }
+  .service-detail-content > p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 24px; }
+  .service-offerings { list-style: none; margin-bottom: 24px; }
+  .service-offerings li {
+    padding: 10px 0; font-size: 0.95rem; color: var(--gray-700);
+    display: flex; align-items: flex-start; gap: 12px;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .service-offerings li:last-child { border: none; }
+  .check-icon { color: var(--green); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
+  .who-for {
+    background: var(--blue-pale); border-radius: var(--radius);
+    padding: 20px 24px; margin-bottom: 24px;
+  }
+  .who-for strong { color: var(--navy); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 6px; }
+  .who-for p { font-size: 0.925rem; color: var(--gray-600); margin: 0; }
+  .benefit-callout {
+    display: flex; align-items: center; gap: 16px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: var(--radius); padding: 24px; margin-bottom: 24px;
+  }
+  .benefit-callout .icon { font-size: 2rem; }
+  .benefit-callout p { color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 500; }
+  .service-visual {
+    background: linear-gradient(135deg, var(--gray-50), var(--blue-pale));
+    border-radius: var(--radius-lg); padding: 48px; display: flex;
+    align-items: center; justify-content: center; min-height: 400px;
+    position: relative; overflow: hidden;
+  }
+  .service-visual-content { text-align: center; }
+  .service-visual-icon { font-size: 4rem; margin-bottom: 16px; display: block; }
+  .service-visual-label { font-size: 1rem; font-weight: 600; color: var(--navy); }
+  .service-visual-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+  .service-visual-tags span {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: 50px; padding: 6px 14px; font-size: 0.8rem;
+    color: var(--gray-600); font-weight: 500;
+  }
+
+  /* ============ HOW IT WORKS ============ */
+  .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+  .steps-grid::before {
+    content: ''; position: absolute; top: 40px; left: 10%; right: 10%;
+    height: 2px; background: linear-gradient(90deg, var(--blue), var(--green));
+    z-index: 0;
+  }
+  .step-card { text-align: center; position: relative; z-index: 1; }
+  .step-number {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: var(--white); border: 3px solid var(--blue);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem;
+    font-weight: 800; color: var(--blue); margin: 0 auto 20px;
+    box-shadow: var(--shadow);
+  }
+  .step-card h4 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .step-card p { font-size: 0.9rem; color: var(--gray-500); line-height: 1.6; }
+
+  .engagement-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 48px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+  .engagement-table th {
+    background: var(--navy); color: var(--white); padding: 16px 24px;
+    text-align: left; font-size: 0.9rem; font-weight: 600;
+  }
+  .engagement-table td { padding: 16px 24px; border-bottom: 1px solid var(--gray-200); font-size: 0.925rem; color: var(--gray-600); }
+  .engagement-table tr:last-child td { border-bottom: none; }
+  .engagement-table tr:hover td { background: var(--blue-pale); }
+  .engagement-table .model-name { font-weight: 600; color: var(--navy); }
+
+  /* ============ INDUSTRIES ============ */
+  .industries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .industry-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius); padding: 28px;
+    transition: var(--transition); cursor: default;
+  }
+  .industry-card:hover { border-color: var(--blue); box-shadow: var(--shadow); }
+  .industry-card .ind-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+  .industry-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .industry-card p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.6; }
+
+  /* ============ WHY I-COST ============ */
+  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .why-card {
+    background: var(--white); border-radius: var(--radius-lg);
+    padding: 36px; border: 1px solid var(--gray-200);
+    transition: var(--transition);
+  }
+  .why-card:hover { box-shadow: var(--shadow-lg); }
+  .why-card .why-icon { font-size: 2rem; margin-bottom: 16px; display: block; }
+  .why-card h4 { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .why-card p { font-size: 0.95rem; color: var(--gray-500); line-height: 1.7; }
+
+  /* ============ STATS BAR ============ */
+  .stats-bar { background: var(--navy); padding: 64px 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+  .stat-item h3 { font-size: 2.5rem; font-weight: 800; color: var(--green); margin-bottom: 6px; }
+  .stat-item p { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+
+  /* ============ TESTIMONIALS ============ */
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .testimonial-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg); padding: 32px;
+    transition: var(--transition);
+  }
+  .testimonial-card:hover { box-shadow: var(--shadow-lg); }
+  .stars { color: var(--orange); font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
+  .testimonial-card blockquote { font-size: 0.95rem; color: var(--gray-600); line-height: 1.7; font-style: italic; margin-bottom: 20px; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .testimonial-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-weight: 700; font-size: 1rem;
+  }
+  .testimonial-author strong { font-size: 0.9rem; color: var(--navy); display: block; }
+  .testimonial-author span { font-size: 0.8rem; color: var(--gray-400); }
+
+  /* ============ ABOUT ============ */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .about-content h3 { font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 20px; }
+  .about-content p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+  .about-visual {
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    border-radius: var(--radius-lg); padding: 48px; position: relative;
+    min-height: 400px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .about-value {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .about-value:last-child { border-bottom: none; }
+  .about-value .av-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: rgba(255,255,255,0.1); display: flex;
+    align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
+  }
+  .about-value h5 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+  .about-value p { font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.5; margin: 0; }
+
+  /* ============ FAQ ============ */
+  .faq-list { max-width: 800px; margin: 0 auto; }
+  .faq-item {
+    border: 1px solid var(--gray-200); border-radius: var(--radius);
+    margin-bottom: 12px; overflow: hidden; background: var(--white);
+    transition: var(--transition);
+  }
+  .faq-item:hover { border-color: var(--blue); }
+  .faq-question {
+    width: 100%; padding: 20px 24px; background: none; border: none;
+    cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem;
+    font-weight: 600; color: var(--navy); text-align: left;
+  }
+  .faq-question .arrow { font-size: 1.2rem; color: var(--gray-400); transition: var(--transition); }
+  .faq-item.active .faq-question .arrow { transform: rotate(180deg); color: var(--blue); }
+  .faq-answer { padding: 0 24px 20px; font-size: 0.95rem; color: var(--gray-600); line-height: 1.7; display: none; }
+  .faq-item.active .faq-answer { display: block; }
+
+  /* ============ CTA BANNER ============ */
+  .cta-banner {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 50%, var(--navy-light) 100%);
+    padding: 80px 0; text-align: center; position: relative; overflow: hidden;
+  }
+  .cta-banner::before {
+    content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+    border-radius: 50%; background: rgba(30,107,184,0.15);
+  }
+  .cta-banner h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--white); font-weight: 800; margin-bottom: 16px; position: relative; }
+  .cta-banner p { font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: 32px; max-width: 560px; margin-left: auto; margin-right: auto; position: relative; }
+  .cta-banner .btn-cta { font-size: 1.1rem; padding: 16px 36px; position: relative; }
+
+  /* ============ CONTACT ============ */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+  .contact-form { display: flex; flex-direction: column; gap: 20px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 0.875rem; font-weight: 600; color: var(--navy); }
+  .form-group input, .form-group select, .form-group textarea {
+    padding: 12px 16px; border: 1px solid var(--gray-300); border-radius: 10px;
+    font-size: 0.95rem; font-family: 'Inter', sans-serif; color: var(--gray-800);
+    transition: var(--transition); background: var(--white);
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(30,107,184,0.1);
+  }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .contact-info { display: flex; flex-direction: column; justify-content: center; }
+  .contact-info h3 { font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 16px; }
+  .contact-info > p { font-size: 1.05rem; color: var(--gray-500); line-height: 1.7; margin-bottom: 32px; }
+  .contact-detail {
+    display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px;
+  }
+  .contact-detail .cd-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--blue-pale); display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; flex-shrink: 0;
+  }
+  .contact-detail strong { font-size: 0.9rem; color: var(--navy); display: block; margin-bottom: 2px; }
+  .contact-detail span { font-size: 0.9rem; color: var(--gray-500); }
+
+  /* ============ BLOG PREVIEW ============ */
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .blog-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg); overflow: hidden;
+    transition: var(--transition);
+  }
+  .blog-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+  .blog-thumb {
+    height: 200px; background: linear-gradient(135deg, var(--navy), var(--blue));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; color: rgba(255,255,255,0.3);
+  }
+  .blog-content { padding: 24px; }
+  .blog-tag {
+    display: inline-block; background: var(--blue-pale); color: var(--blue);
+    font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 50px;
+    margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .blog-card h4 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.4; }
+  .blog-card p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.6; }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    background: var(--gray-900); color: rgba(255,255,255,0.6); padding: 64px 0 32px;
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand .logo { color: var(--white); margin-bottom: 16px; }
+  .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 280px; }
+  .footer h5 { color: var(--white); font-size: 0.9rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 10px; }
+  .footer ul a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.9rem; transition: var(--transition); }
+  .footer ul a:hover { color: var(--white); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.85rem;
+  }
+
+  .back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: var(--transition);
+    z-index: 950;
+  }
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .back-to-top:hover { background: var(--blue-light); }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 1024px) {
+    .service-detail-grid { grid-template-columns: 1fr; gap: 32px; }
+    .service-detail-grid.reverse { direction: ltr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 12px 16px 20px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 6px;
+    }
+    .nav-links.mobile-open { display: flex; }
+    .nav-links .dropdown > a::after { content: ''; }
+    .dropdown-menu {
+      display: block;
+      position: static;
+      margin-top: 0;
+      box-shadow: none;
+      border: none;
+      padding: 0 0 4px 12px;
+      min-width: unset;
+    }
+    .hamburger { display: flex; }
+    .hero-stats { flex-direction: column; gap: 24px; }
+    .steps-grid { grid-template-columns: 1fr 1fr; }
+    .steps-grid::before { display: none; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .industries-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<a href="#home" class="skip-link">Skip to content</a>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="logo">I<span>-</span>Cost</a>
+    <ul class="nav-links" id="nav-links">
+      <li class="dropdown">
+        <a href="#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="#svc-ondemand">On-Demand Project Professionals <small>PMs, QS, Estimators — remote or on-site</small></a>
+          <a href="#svc-pm">Project Management Support <small>Setup, tracking & coordination</small></a>
+          <a href="#svc-qs">Financial & QS Support <small>Cost control & reporting</small></a>
+          <a href="#svc-admin">Admin & Back-Office <small>Document control & compliance</small></a>
+          <a href="#svc-tech">Technology Enablement <small>Platforms, dashboards & automation</small></a>
+        </div>
+      </li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li class="dropdown">
+        <a href="#industries">Industries</a>
+        <div class="dropdown-menu">
+          <a href="#industries">Residential</a>
+          <a href="#industries">Commercial</a>
+          <a href="#industries">Infrastructure & Civil</a>
+          <a href="#industries">Education</a>
+          <a href="#industries">Healthcare</a>
+          <a href="#industries">Fit-Out & Refurbishment</a>
+          <a href="#industries">Industrial & Logistics</a>
+        </div>
+      </li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="btn-cta">Get a Free Consultation</a></li>
+    </ul>
+    <button class="hamburger" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span>Trusted by contractors and developers across the UK</span>
+    </div>
+    <h1>On-Demand Construction Expertise.<br><em>Real Project Results.</em></h1>
+    <p>From quantity surveyors to project managers, we provide skilled construction professionals who integrate seamlessly with your team — remotely or on-site, on demand, and ready to deliver.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-cta" style="padding: 16px 32px; font-size: 1.05rem;">Get a Free Consultation &rarr;</a>
+      <a href="#services" class="btn-outline">Explore Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><h3>500+</h3><p>Projects Supported</p></div>
+      <div class="hero-stat"><h3>150+</h3><p>Construction Professionals</p></div>
+      <div class="hero-stat"><h3>98%</h3><p>Client Retention Rate</p></div>
+      <div class="hero-stat"><h3>48hr</h3><p>Average Placement Time</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner container">
+    <div class="trust-item"><div class="trust-icon">&#128737;</div>Quality-Vetted Professionals</div>
+    <div class="trust-item"><div class="trust-icon">&#9889;</div>48-Hour Placement</div>
+    <div class="trust-item"><div class="trust-icon">&#127919;</div>Remote or On-Site Delivery</div>
+    <div class="trust-item"><div class="trust-icon">&#128200;</div>Flexible Engagement Models</div>
+  </div>
+</div>
+
+<!-- ============ SERVICES OVERVIEW ============ -->
+<section id="services">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Construction Support Services</h2>
+      <p class="section-subtitle">We provide skilled construction professionals for short-term projects, permanent roles, and leadership positions across every sector of the built environment — deployed remotely or on-site, wherever your project needs them.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon blue">&#128104;&#8205;&#128188;</div>
+        <h3>On-Demand Project Professionals</h3>
+        <p>Access experienced Project Managers, Quantity Surveyors, Estimators, and Construction Administrators on demand — deployed remotely or embedded on-site. Our professionals integrate with your workflows and hit the ground running.</p>
+        <a href="#svc-ondemand" class="learn-more">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon green">&#128203;</div>
+        <h3>Project Management Support</h3>
+        <p>From project setup to site coordination, we provide the structure and oversight your projects need — whether through a remote PM or boots on the ground. Tracking, estimation, procurement automation, and timesheet management — handled.</p>
+        <a href="#svc-pm" class="learn-more">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon orange">&#128176;</div>
+        <h3>Financial & QS Support</h3>
+        <p>Keep costs under control with expert cost estimating, material tracking, vendor management, and financial reporting. We help you protect your margins and maintain full visibility of project spend.</p>
+        <a href="#svc-qs" class="learn-more">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon purple">&#128193;</div>
+        <h3>Admin & Back-Office Support</h3>
+        <p>Document control, RFI coordination, change order processing, timesheet entry, and cloud file organisation — handled by professionals who understand construction workflows inside out, working remotely or from your office.</p>
+        <a href="#svc-admin" class="learn-more">Learn more &rarr;</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon red">&#128187;</div>
+        <h3>Technology Enablement</h3>
+        <p>Modernise your operations with cloud-based project platforms, automated systems, real-time dashboards, and integrated procurement tools. We set it up, train your team, and support you through the transition.</p>
+        <a href="#svc-tech" class="learn-more">Learn more &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE DETAILS ============ -->
+<section class="bg-gray" id="service-details">
+  <div class="container">
+
+    <!-- Service 1 -->
+    <div class="service-detail" id="svc-ondemand">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <div class="section-label">Service 01</div>
+          <h3>Your Project Team, Without the Overhead</h3>
+          <p>Finding the right construction professional should not hold your project back. I-Cost provides experienced Project Managers, Quantity Surveyors, Estimators, and Construction Administrators who integrate directly with your team — working remotely or embedded on-site, on your schedule, using your preferred tools and platforms.</p>
+          <p>Our professionals are not generalists. They are construction specialists with hands-on experience across residential, commercial, infrastructure, and fit-out projects. Whether you need someone in your site office five days a week or a remote QS managing your cost plans from a distance, we match the right person to the right delivery model for your project.</p>
+          <ul class="service-offerings">
+            <li><span class="check-icon">&#10003;</span> Project Manager (remote or on-site)</li>
+            <li><span class="check-icon">&#10003;</span> Quantity Surveyor (remote or on-site)</li>
+            <li><span class="check-icon">&#10003;</span> Estimator (remote or on-site)</li>
+            <li><span class="check-icon">&#10003;</span> Construction Administrator</li>
+            <li><span class="check-icon">&#10003;</span> Construction Assistant (specialist support)</li>
+          </ul>
+          <div class="who-for">
+            <strong>Who This Is For</strong>
+            <p>Contractors, developers, and consultancies who need experienced construction professionals without the cost and commitment of permanent hires. Ideal for project peaks, specialist expertise gaps, site-based roles, or ongoing flexible support.</p>
+          </div>
+          <a href="#contact" class="btn-primary">Discuss Your Requirements &rarr;</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-content">
+            <span class="service-visual-icon">&#128104;&#8205;&#128188;</span>
+            <span class="service-visual-label">On-Demand Project Professionals</span>
+            <div class="service-visual-tags">
+              <span>Project Managers</span><span>Quantity Surveyors</span>
+              <span>Estimators</span><span>Remote & On-Site</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-detail" id="svc-pm">
+      <div class="service-detail-grid reverse">
+        <div class="service-detail-content">
+          <div class="section-label">Service 02</div>
+          <h3>Structure, Oversight, and Control — From Setup to Handover</h3>
+          <p>Effective project management is the difference between a project that delivers on time and on budget, and one that spirals. I-Cost provides comprehensive project management support — remotely or with dedicated professionals embedded on your site — giving you the structure and visibility you need at every stage.</p>
+          <p>From initial project setup and programme development through to procurement coordination and site operations, our team handles the operational detail so your senior managers can focus on strategic decisions. We identify risks early, flag programme slippage before it becomes critical, and ensure every workstream is aligned with your commercial objectives.</p>
+          <ul class="service-offerings">
+            <li><span class="check-icon">&#10003;</span> Project Setup and Tracking</li>
+            <li><span class="check-icon">&#10003;</span> Estimation Management</li>
+            <li><span class="check-icon">&#10003;</span> Timesheet Management</li>
+            <li><span class="check-icon">&#10003;</span> Procurement & Purchase Order Automation</li>
+            <li><span class="check-icon">&#10003;</span> Site Operations Coordination</li>
+          </ul>
+          <div class="who-for">
+            <strong>Who This Is For</strong>
+            <p>Main contractors, subcontractors, and developers managing multiple live projects who need additional project management capacity without the recruitment timeline.</p>
+          </div>
+          <a href="#contact" class="btn-primary">Talk to Our PM Team &rarr;</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-content">
+            <span class="service-visual-icon">&#128203;</span>
+            <span class="service-visual-label">Project Management Support</span>
+            <div class="service-visual-tags">
+              <span>Programme Tracking</span><span>Estimation</span>
+              <span>Procurement</span><span>Site Coordination</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-detail" id="svc-qs">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <div class="section-label">Service 03</div>
+          <h3>Protect Your Margins. Control Your Costs.</h3>
+          <p>In construction, cost control is not a nice-to-have — it is the difference between profit and loss. I-Cost provides expert financial and quantity surveying support that gives you complete visibility and control over project expenditure from pre-construction through to final account.</p>
+          <p>Our QS professionals bring the rigour and attention to detail that protects your bottom line. We do not just track costs — we actively help you reduce them. Through value engineering, procurement optimisation, and detailed variance analysis, our team identifies savings opportunities that directly improve your project margins.</p>
+          <ul class="service-offerings">
+            <li><span class="check-icon">&#10003;</span> Cost Estimating & Budget Control</li>
+            <li><span class="check-icon">&#10003;</span> Material Cost Tracking</li>
+            <li><span class="check-icon">&#10003;</span> Vendor & Purchase Order Management</li>
+            <li><span class="check-icon">&#10003;</span> Invoice Verification</li>
+            <li><span class="check-icon">&#10003;</span> Project Financial Reporting</li>
+          </ul>
+          <div class="benefit-callout">
+            <div class="icon">&#128200;</div>
+            <p>Our clients typically see cost savings of 15-25% through proactive commercial management and value engineering.</p>
+          </div>
+          <a href="#contact" class="btn-primary">Speak to a QS Specialist &rarr;</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-content">
+            <span class="service-visual-icon">&#128176;</span>
+            <span class="service-visual-label">Financial & QS Support</span>
+            <div class="service-visual-tags">
+              <span>Cost Estimating</span><span>Budget Control</span>
+              <span>Vendor Management</span><span>Financial Reporting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-detail" id="svc-admin">
+      <div class="service-detail-grid reverse">
+        <div class="service-detail-content">
+          <div class="section-label">Service 04</div>
+          <h3>The Operational Backbone Your Projects Need</h3>
+          <p>Behind every successful construction project is a well-organised back office. Document control, RFI management, change order processing, and compliance tracking are not glamorous — but when they fail, projects stall, costs escalate, and relationships suffer.</p>
+          <p>I-Cost provides dedicated construction administration professionals who take the operational burden off your project teams. Our administrators are not general office staff — they are construction-trained professionals who understand the terminology, the workflows, and the urgency. We work within your existing systems — Procore, Asite, Aconex, or SharePoint — and adapt to your processes from day one.</p>
+          <ul class="service-offerings">
+            <li><span class="check-icon">&#10003;</span> Document Control & Management</li>
+            <li><span class="check-icon">&#10003;</span> RFI & Submittal Coordination</li>
+            <li><span class="check-icon">&#10003;</span> Change Order Processing</li>
+            <li><span class="check-icon">&#10003;</span> Timesheet Data Entry</li>
+            <li><span class="check-icon">&#10003;</span> Cloud File Organisation</li>
+          </ul>
+          <div class="who-for">
+            <strong>Who This Is For</strong>
+            <p>Any construction business drowning in paperwork. From small contractors managing submittals on a single project to large consultancies needing document control across a portfolio.</p>
+          </div>
+          <a href="#contact" class="btn-primary">Streamline Your Back Office &rarr;</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-content">
+            <span class="service-visual-icon">&#128193;</span>
+            <span class="service-visual-label">Admin & Back-Office Support</span>
+            <div class="service-visual-tags">
+              <span>Document Control</span><span>RFI Management</span>
+              <span>Change Orders</span><span>Cloud Filing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="service-detail" id="svc-tech">
+      <div class="service-detail-grid">
+        <div class="service-detail-content">
+          <div class="section-label">Service 05</div>
+          <h3>Modernise How You Build</h3>
+          <p>The construction industry is changing. Firms that embrace technology are delivering projects faster, cheaper, and with fewer errors. But implementing new systems is hard — especially when your team is already stretched across live projects.</p>
+          <p>I-Cost does not just recommend technology — we implement it, configure it, train your team, and support you through the transition. We start by understanding your current workflows, identify the biggest efficiency gains, and deploy solutions that your team will actually use. No bloated enterprise systems, no unnecessary complexity — just practical tools that make your projects run better.</p>
+          <ul class="service-offerings">
+            <li><span class="check-icon">&#10003;</span> Cloud-Based Project Platform Implementation</li>
+            <li><span class="check-icon">&#10003;</span> Automated Timesheet & PO Systems</li>
+            <li><span class="check-icon">&#10003;</span> Real-Time Project Tracking Dashboards</li>
+            <li><span class="check-icon">&#10003;</span> Integrated Procurement Tools</li>
+            <li><span class="check-icon">&#10003;</span> Real-Time Analytics & Reports</li>
+          </ul>
+          <div class="benefit-callout">
+            <div class="icon">&#128640;</div>
+            <p>Reduce manual data entry by up to 60% and gain real-time visibility across all active projects from day one.</p>
+          </div>
+          <a href="#contact" class="btn-primary">Start Your Digital Transformation &rarr;</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-visual-content">
+            <span class="service-visual-icon">&#128187;</span>
+            <span class="service-visual-label">Technology Enablement</span>
+            <div class="service-visual-tags">
+              <span>Cloud Platforms</span><span>Automation</span>
+              <span>Dashboards</span><span>Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;">Our Process</div>
+      <h2 class="section-title">Simple, Fast, and Built Around You</h2>
+      <p class="section-subtitle">Getting started with I-Cost takes days, not months. Here is how we deliver the construction support you need.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h4>Share Your Requirements</h4>
+        <p>Tell us about your project, the roles you need, and the timeline. A free consultation usually takes less than 30 minutes.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h4>We Source & Vet</h4>
+        <p>Within 48 hours, we identify and present vetted construction professionals matched to your project needs and team culture.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h4>Seamless Integration</h4>
+        <p>Whether remote or on-site, our professionals integrate with your existing tools and workflows from day one. We adapt to you, not the other way around.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h4>Ongoing Quality Assurance</h4>
+        <p>Regular performance reviews, your feedback actioned, and the flexibility to scale up or down as your project demands change.</p>
+      </div>
+    </div>
+
+    <table class="engagement-table">
+      <thead>
+        <tr><th>Engagement Model</th><th>Best For</th><th>How It Works</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="model-name">Project-Based</td><td>Short-term or defined scope work</td><td>Dedicated professional(s) for the duration of a specific project</td></tr>
+        <tr><td class="model-name">Retainer</td><td>Ongoing or recurring support needs</td><td>Agreed hours per week/month with a dedicated professional</td></tr>
+        <tr><td class="model-name">Ad-Hoc</td><td>Occasional or urgent requirements</td><td>On-demand access to professionals as and when needed</td></tr>
+        <tr><td class="model-name">Team Augmentation</td><td>Scaling for project peaks</td><td>Multiple professionals deployed as an integrated extension of your team</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ STATS BAR ============ -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><h3>500+</h3><p>Projects Delivered</p></div>
+      <div class="stat-item"><h3>10+</h3><p>Years in Construction</p></div>
+      <div class="stat-item"><h3>&pound;200M+</h3><p>In Projects Supported</p></div>
+      <div class="stat-item"><h3>98%</h3><p>Client Satisfaction</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ INDUSTRIES ============ -->
+<section class="bg-gray" id="industries">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;">Sectors We Serve</div>
+      <h2 class="section-title">Construction Expertise Across Every Sector</h2>
+      <p class="section-subtitle">Our professionals have delivered projects across the full spectrum of the built environment. Whatever you are building, we have the expertise to support it.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card">
+        <span class="ind-icon">&#127968;</span>
+        <h4>Residential</h4>
+        <p>From luxury apartments to large-scale housing developments — cost planning, QS, and project management expertise for the unique pressures of the residential market.</p>
+      </div>
+      <div class="industry-card">
+        <span class="ind-icon">&#127970;</span>
+        <h4>Commercial</h4>
+        <p>Office fit-outs, retail developments, and mixed-use schemes demand precision and pace. We keep commercial projects on programme and within budget.</p>
+      </div>
+      <div class="industry-card">
+        <span class="ind-icon">&#128679;</span>
+        <h4>Infrastructure & Civil</h4>
+        <p>Highways, utilities, rail, and public infrastructure projects require rigorous cost management and compliance. We bring the technical depth these complex schemes demand.</p>
+      </div>
+      <div class="industry-card">
+        <span class="ind-icon">&#127979;</span>
+        <h4>Education</h4>
+        <p>Schools and universities built to strict standards and tight budgets. We navigate the complexities of public sector procurement and DfE requirements.</p>
+      </div>
+      <div class="industry-card">
+        <span class="ind-icon">&#127973;</span>
+        <h4>Healthcare</h4>
+        <p>Healthcare construction requires meticulous planning, infection control compliance, and coordination with operational facilities. We support NHS and private healthcare projects.</p>
+      </div>
+      <div class="industry-card">
+        <span class="ind-icon">&#128295;</span>
+        <h4>Fit-Out & Refurbishment</h4>
+        <p>From CAT A shell to complete interior refurbishment — the detailed cost planning and project coordination that fit-out projects demand.</p>
+      </div>
+      <div class="industry-card">
+        <span class="ind-icon">&#127981;</span>
+        <h4>Industrial & Logistics</h4>
+        <p>Warehousing, distribution centres, and manufacturing facilities. We support industrial projects with procurement management, cost tracking, and programme oversight.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY I-COST ============ -->
+<section id="why-icost">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;">Why Choose Us</div>
+      <h2 class="section-title">The I-Cost Difference</h2>
+      <p class="section-subtitle">We are not a generalist staffing agency. We are construction specialists who deliver results.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">&#127942;</span>
+        <h4>Deep Industry Expertise</h4>
+        <p>Our team comes from construction. We understand programme deadlines, cost overruns, procurement complexities, and compliance requirements because we have lived them. Construction is all we do.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">&#128270;</span>
+        <h4>Quality-Vetted Professionals</h4>
+        <p>Every professional is rigorously assessed for technical competence, industry experience, and communication skills. We reference-check every candidate and maintain ongoing performance reviews.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">&#128260;</span>
+        <h4>Flexible Delivery, Your Way</h4>
+        <p>Remote or on-site. One role or an entire team. A week or a year. We scale up or down to match your project demands, delivered however your project needs it. No long-term contracts required.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">&#128161;</span>
+        <h4>Technology-First Approach</h4>
+        <p>We do not just provide people — we provide smarter ways of working. From real-time dashboards to automated procurement, we help modernise how you manage construction projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="bg-gray" id="testimonials">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;">Client Feedback</div>
+      <h2 class="section-title">Trusted by Construction Professionals</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"I-Cost provided us with a QS who hit the ground running. Within a week, they had full visibility of our cost position and identified savings we had completely missed. The flexibility to have them work remotely and come to site when needed was exactly what our project required."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JD</div>
+          <div><strong>James Davidson</strong><span>Commercial Director, [Company]</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"We needed project management support across three live sites at short notice. I-Cost delivered two experienced PMs within 48 hours. They integrated with our team as if they had been there from day one."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SP</div>
+          <div><strong>Sarah Patel</strong><span>Operations Manager, [Company]</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"The back-office support from I-Cost transformed how we manage document control. Our project managers are now spending their time on delivery instead of paperwork. It has been a game-changer."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div><strong>Michael Reynolds</strong><span>Project Director, [Company]</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <div class="section-label">About I-Cost</div>
+        <h3>Built by Construction People, for Construction People</h3>
+        <p>I-Cost was founded on a simple belief: that construction businesses deserve access to top-tier professional support without the cost, complexity, and risk of traditional hiring.</p>
+        <p>We are not a generalist staffing agency. Every member of our network is a construction specialist — experienced quantity surveyors, project managers, estimators, and administrators who have worked on real projects, managed real budgets, and solved real problems on site and in the office. Whether you need someone working remotely or physically present on your project, we deliver.</p>
+        <p>We combine deep industry knowledge with modern technology and flexible engagement models to give you the support you need, exactly when and where you need it. No lengthy recruitment processes. No expensive permanent hires for temporary needs. Just the right people, deployed the right way, ready to deliver.</p>
+        <a href="#contact" class="btn-primary" style="margin-top: 16px;">Work With Us &rarr;</a>
+      </div>
+      <div class="about-visual">
+        <div class="about-value">
+          <div class="av-icon">&#9733;</div>
+          <div><h5>Excellence Over Expediency</h5><p>We never compromise on quality. Every candidate is rigorously vetted because your project reputation depends on it.</p></div>
+        </div>
+        <div class="about-value">
+          <div class="av-icon">&#129309;</div>
+          <div><h5>Partnership, Not Transactions</h5><p>We build long-term relationships. We succeed when you succeed, which is why we invest in understanding your business.</p></div>
+        </div>
+        <div class="about-value">
+          <div class="av-icon">&#128161;</div>
+          <div><h5>Innovation With Purpose</h5><p>We embrace technology that makes construction better — not technology for its own sake.</p></div>
+        </div>
+        <div class="about-value">
+          <div class="av-icon">&#128275;</div>
+          <div><h5>Transparency Always</h5><p>No hidden fees, no surprise costs. We are upfront about what we deliver and what you can expect.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG PREVIEW ============ -->
+<section class="bg-gray" id="blog">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;">Insights</div>
+      <h2 class="section-title">Latest From Our Blog</h2>
+      <p class="section-subtitle">Expert perspectives on construction support, cost management, and the future of project delivery.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-thumb">&#128209;</div>
+        <div class="blog-content">
+          <span class="blog-tag">Quantity Surveying</span>
+          <h4>On-Demand QS: How Flexible Quantity Surveying is Changing Construction</h4>
+          <p>Everything contractors need to know about working with on-demand QS professionals — from cost planning to final account management.</p>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background: linear-gradient(135deg, #059669, #10B981);">&#128203;</div>
+        <div class="blog-content">
+          <span class="blog-tag">Project Management</span>
+          <h4>5 Signs Your Construction Project Needs Dedicated Back-Office Support</h4>
+          <p>Recognise the warning signs before admin bottlenecks impact your programme deadlines and project margins.</p>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb" style="background: linear-gradient(135deg, #D97706, #F59E0B);">&#128176;</div>
+        <div class="blog-content">
+          <span class="blog-tag">Cost Savings</span>
+          <h4>How to Reduce Construction Admin Costs by 40% With Remote Professionals</h4>
+          <p>A data-driven look at the cost advantages of on-demand construction support over traditional hiring models.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;">Got Questions?</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <button class="faq-question">What is on-demand construction support? <span class="arrow">&#9660;</span></button>
+        <div class="faq-answer">On-demand construction support means accessing experienced construction professionals — quantity surveyors, project managers, estimators, and administrators — exactly when your project needs them, without the overhead of permanent employment. Our professionals can work remotely, be embedded on-site at your project, or combine both approaches depending on what the role requires. They use your tools, attend your meetings, and deliver the same quality as a permanent hire.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How quickly can you provide professionals? <span class="arrow">&#9660;</span></button>
+        <div class="faq-answer">In most cases, we can identify and present suitable candidates within 48 hours. For urgent requirements, we have professionals available to start within 24 hours. The timeline depends on the specificity of the role and sector experience required.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do you vet your professionals? <span class="arrow">&#9660;</span></button>
+        <div class="faq-answer">Every professional undergoes a rigorous assessment including technical competency evaluation, sector experience verification, reference checks, qualification confirmation, and a structured interview. We also conduct ongoing performance reviews throughout every engagement.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can your professionals use our existing tools and systems? <span class="arrow">&#9660;</span></button>
+        <div class="faq-answer">Absolutely. Our team is experienced with industry-standard platforms including Procore, Asite, Aconex, Microsoft Project, Primavera, COINS, Sage, and various cloud-based collaboration tools. We adapt to your systems and processes, not the other way around.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What is your pricing structure? <span class="arrow">&#9660;</span></button>
+        <div class="faq-answer">We offer flexible engagement models including project-based, retainer, ad-hoc, and team augmentation. Pricing is transparent and based on the role, experience level, and engagement duration. Contact us for a tailored quote — there is no obligation and no hidden fees.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you only work with large companies? <span class="arrow">&#9660;</span></button>
+        <div class="faq-answer">Not at all. We work with businesses of all sizes, from sole traders and small subcontractors to major developers and Tier 1 main contractors. Our flexible engagement models mean you only pay for the support you need.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What is the difference between I-Cost and a traditional recruitment agency? <span class="arrow">&#9660;</span></button>
+        <div class="faq-answer">Traditional recruitment agencies find you a candidate and walk away. I-Cost provides managed construction support — whether remote or on-site — and we remain involved throughout the engagement. We provide quality oversight, performance management, and the flexibility to scale up, down, or change the delivery model as your project demands evolve.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you provide on-site as well as remote professionals? <span class="arrow">&#9660;</span></button>
+        <div class="faq-answer">Yes. We provide both. Some roles work best remotely — such as cost reporting, document control, and financial management. Others require a physical presence on-site — such as site-based project management or operations coordination. Many engagements combine both. We work with you to determine the right delivery model for each role, and we can adjust as the project evolves. We cover the entire United Kingdom.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>Ready to Build Your Team<br>Without the Overhead?</h2>
+    <p>Get started with a free consultation. Tell us what you need and we will show you how I-Cost can help deliver your next project — on time, on budget.</p>
+    <a href="#contact" class="btn-cta">Book Your Free Consultation &rarr;</a>
+  </div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Get In Touch</div>
+        <h3>Let Us Talk About Your Next Project</h3>
+        <p>Whether you need a single QS working remotely, a project manager embedded on-site, or an entire support team — it starts with a conversation. Get in touch and we will arrange a free consultation within 24 hours.</p>
+        <div class="contact-detail">
+          <div class="cd-icon">&#9993;</div>
+          <div><strong>Email</strong><span>info@i-cost.co.uk</span></div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">&#128222;</div>
+          <div><strong>Phone</strong><span>+44 (0) XXX XXXX XXXX</span></div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">&#128205;</div>
+          <div><strong>Office</strong><span>London, United Kingdom</span></div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">&#128336;</div>
+          <div><strong>Hours</strong><span>Monday - Friday, 8:00am - 6:00pm</span></div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! We will be in touch within 24 hours.');">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input id="companyName" name="companyName" type="text" autocomplete="organization" placeholder="Your company">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emailAddress">Email *</label>
+            <input id="emailAddress" name="emailAddress" type="email" autocomplete="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone</label>
+            <input id="phoneNumber" name="phoneNumber" type="tel" autocomplete="tel" placeholder="+44 XXXX XXXXXX">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projectType">Project Type</label>
+            <select id="projectType" name="projectType">
+              <option value="">Select project type...</option>
+              <option>Residential</option>
+              <option>Commercial</option>
+              <option>Infrastructure & Civil</option>
+              <option>Education</option>
+              <option>Healthcare</option>
+              <option>Fit-Out & Refurbishment</option>
+              <option>Industrial & Logistics</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="serviceNeed">What do you need?</label>
+            <select id="serviceNeed" name="serviceNeed">
+              <option value="">Select service...</option>
+              <option>On-Demand Project Professionals</option>
+              <option>Project Management Support</option>
+              <option>Financial & QS Support</option>
+              <option>Admin & Back-Office Support</option>
+              <option>Technology Enablement</option>
+              <option>Not Sure Yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="preferredContact">Preferred contact method</label>
+          <select id="preferredContact" name="preferredContact">
+            <option value="">Select a method...</option>
+            <option>Phone</option>
+            <option>Email</option>
+            <option>Video Call</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="projectDetails">Tell us about your project</label>
+          <textarea id="projectDetails" name="projectDetails" placeholder="Briefly describe your requirements, timeline, and any specific skills needed..."></textarea>
+        </div>
+        <button type="submit" class="btn-cta" style="align-self: flex-start; font-size: 1rem; padding: 14px 32px;">Request Your Free Consultation &rarr;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">I<span>-</span>Cost</a>
+        <p>On-demand construction professionals for contractors, developers, and consultancies across the UK. Remote or on-site. The right people, deployed the right way.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#svc-ondemand">On-Demand Professionals</a></li>
+          <li><a href="#svc-pm">Project Management</a></li>
+          <li><a href="#svc-qs">Financial & QS Support</a></li>
+          <li><a href="#svc-admin">Admin & Back-Office</a></li>
+          <li><a href="#svc-tech">Technology Enablement</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Industries</h5>
+        <ul>
+          <li><a href="#industries">Residential</a></li>
+          <li><a href="#industries">Commercial</a></li>
+          <li><a href="#industries">Infrastructure</a></li>
+          <li><a href="#industries">Education</a></li>
+          <li><a href="#industries">Healthcare</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 I-Cost. All rights reserved.</span>
+      <span>On-Demand Construction Support Services | United Kingdom</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.getElementById('nav-links');
+  const menuToggle = document.getElementById('menu-toggle');
+  const backToTop = document.getElementById('backToTop');
+  const sectionIds = ['services', 'how-it-works', 'industries', 'about', 'faq', 'contact'];
+
+  const closeMobileMenu = () => {
+    navLinks.classList.remove('mobile-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  // Navbar scroll effect + floating action visibility
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 20;
+    navbar.classList.toggle('scrolled', scrolled);
+    backToTop.classList.toggle('visible', window.scrollY > 500);
+  });
+
+  // Mobile menu toggle with accessible state
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('mobile-open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (window.innerWidth < 768) closeMobileMenu();
+      }
+    });
+  });
+
+  // Section-aware active navigation state
+  const navLinkMap = {};
+  sectionIds.forEach(id => {
+    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+    if (link) navLinkMap[id] = link;
+  });
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      Object.values(navLinkMap).forEach(link => link.classList.remove('active'));
+      const activeLink = navLinkMap[entry.target.id];
+      if (activeLink) activeLink.classList.add('active');
+    });
+  }, { rootMargin: '-40% 0px -45% 0px', threshold: 0.1 });
+  sectionIds.forEach(id => {
+    const section = document.getElementById(id);
+    if (section) sectionObserver.observe(section);
+  });
+
+  // Animate elements on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .step-card, .industry-card, .why-card, .testimonial-card, .blog-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
